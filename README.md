@@ -24,19 +24,18 @@ Concepts to meet Objectives:
 
 ## 2.0 Mission Definition Review (MDR
 All hardware and software requirements must be described in metric units (kg & cm)
-2.1 Hardware V1 Functional Requirements:
-Branding:
-KN Series shall use Blue (0x2342F5), Yellow (0xF7C664), and/or White (0xFFFFFF) branding colors on all hardware PCB’s and vehicle vinyl wraps.
-Printed Circuit Boards
-PCB Altium Project Template 
-https://github.com/jose-halocar/ee_altium_template/blob/master/HaloCar_Project_Rename_This_File.PrjPcb
-Schematics:
-PCB Layouts:
-Series PCB  shall be conformal coated 
-https://zymet.com/p-reworkable-edgebond-adhesives.html
-www.masterbond.com/certifications/nasa-low-outgassing
-www.masterbond.com/tds/ep21tcht-1 or www.masterbond.com/tds/ep30lte-lo-black
-CPU Subsytem:
+### 2.1 Hardware V1 Functional Requirements:
+1. Branding:
+   * 1.1 - KN Series shall use Blue (0x2342F5), Yellow (0xF7C664), and/or White (0xFFFFFF) branding colors on all hardware PCB’s and vehicle vinyl wraps.
+2. Printed Circuit Boards
+   * 2.1 - All PCB installed into the KN Series of vechiles shall be conformal coated 
+   * 2.2 - [PCB Altium Project Template](https://github.com/jose-halocar/ee_altium_template/blob/master/HaloCar_Project_Rename_This_File.PrjPcb)
+   * 2.2.1 - Schematics:
+   * 2.2.2 - PCB Layouts:
+
+3. CPU Subsytem:
+4. Clean acces to coin cell battery 
+
 KN Series shall use the ST ARM G4 family of microcontrollers.
 Cables Harnesses:
 KN Series analog inputs shall have some low pass filter on all ADC inputs. 
