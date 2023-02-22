@@ -15,7 +15,7 @@ See [Halo Pitch Deck](???) and [999-00001-A Kira Niro System Architecture Requir
 Objectives:
 1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 5G cellular.
 2. Create rental fleet of 10 vehicles by April 15 that can be resold to dealerships for < $2k in repairs
-3. ???                                                                                                                                           
+3. Stress reflief, IP5X, good air flow (inside case at the lest), and ease of installion of standBy OBC's                                                                                                                                           
 
 Concepts to meet Objectives:
 1. Analog man in the middle attack and digital CAN Bus reverse engineering. 
