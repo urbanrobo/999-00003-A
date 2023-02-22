@@ -53,7 +53,8 @@ All hardware and software requirements must be described in metric units (kg & c
 
 5. Analog 
 
-
+Spheriecal vibration isolatorin in each direction 
+11K RPM server fans https://www.youtube.com/watch?v=nAFB9w2Rh0Y
 
 ### 2.2 Software V1 Functional Requirements:
 1. Branding:
