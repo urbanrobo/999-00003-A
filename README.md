@@ -14,7 +14,7 @@ See [Bill Of Material]() and [Halo Pitch Deck](???) and [999-00001-A Kira Niro S
 
 <br> Objectives:
 1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 5G cellular.
-2. Create a multipiece computer case with IP5X rating, good airflow (internal to case), and great stress relief on all cables.
+2. Create a multipiece computer case with [IP50](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, good airflow (internal to case), and great stress relief on all cables.
 3. Installation of standby OBCs should be extremely easy/fast and have low risk of breaking cable harnesses. 
 4. Create rental fleet of 10 stacked vehicles by April 15 that could be resold to dealerships for less than $2k in repairs.                                                
 
