@@ -10,7 +10,7 @@ APPROVED BY: ANAND NANDAKUMAR ON 2023-03-??-1300
 
 
 ## 1.0 Mission Concept Review (MCR)
-See [Halo Pitch Deck](???) and [999-00001-A Kira Niro System Architecture Requirements Document](https://docs.google.com/document/d/1RNme7q0ufrCDHNyr7VOxuHKhVUad4LDPr4K3CM-rN78/edit) 
+See [Bill Of Material]() and [Halo Pitch Deck](???) and [999-00001-A Kira Niro System Architecture Requirements Document](https://docs.google.com/document/d/1RNme7q0ufrCDHNyr7VOxuHKhVUad4LDPr4K3CM-rN78/edit) 
 
 <br> Objectives:
 1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 5G cellular.
@@ -52,6 +52,8 @@ All hardware and software requirements must be described in metric units (kg & c
    * 4.5 - CAN Bus 
 
 5. Analog 
+
+6. Production Part Database cost per KN shall be less than $4K 
 
 Spheriecal vibration isolatorin in each direction 
 11K RPM server fans https://www.youtube.com/watch?v=nAFB9w2Rh0Y
