@@ -10,18 +10,18 @@ APPROVED BY: ANAND NANDAKUMAR ON 2023-03-??-1300
 
 
 ## 1.0 Mission Concept Review (MCR)
-See [Bill Of Material]() and [Halo Pitch Deck](???) and [999-00001-A Kira Niro System Architecture Requirements Document](https://docs.google.com/document/d/1RNme7q0ufrCDHNyr7VOxuHKhVUad4LDPr4K3CM-rN78/edit) 
+See [Bill Of Material]() and [Halo Pitch Deck](?TODO?) and [999-00001-A Kira Niro System Architecture Requirements Document](https://docs.google.com/document/d/1RNme7q0ufrCDHNyr7VOxuHKhVUad4LDPr4K3CM-rN78/edit) 
 
 <br> Objectives:
 1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 5G cellular.
-2. Create a multi-piece computer case with [IP50](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, good airflow (internal to case), and great stress relief on all cables.
+2. Create a multi-piece computer case with [IP52](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, good airflow, and great stress relief on all cables.
 3. Installation of standby OBCs should be extremely easy/fast and have low risk of breaking cable harnesses. 
 4. Create rental fleet of 10 stacked vehicles by April 15 that could be resold to dealerships for less than $2k in repairs.                                                
 
 <br> Concepts to meet Objectives:
 1. Analog man in the middle attack and digital CAN-FD Bus read and write access.
-2. A three piece metal case (external box provide cable stress relief, internal box holds components, and top lid protects against dust & customers).
-3. The insertion on an internal box into an external box that never leaves a vehicle should take less than 15 minutes and reduce cable bend cycles.
+2. A three piece metal case: External Box (201-0001-A) that provides cable stress relief, holds fans & heat sinks, and protects against dust & small water drops; Internal Box (201-0002-A) that holds components; and Lid (201-0003-A) that protects against customers and falling objects.
+3. The insertion on an Internal box (201-0002-A) into an External box (201-0001-A) that never leaves a vehicle should take less than 15 minutes and reduce cable bend cycles.
 4. All hardware alternations must limit the number of holes put into a vehicle and not damage paint in ANY way long term. <br> <br>
 
 ## 2.0 Mission Definition Review (MDR)
@@ -30,15 +30,24 @@ All hardware and software requirements must be described in metric units (kg, cm
 ### 2.1 Hardware V1 Functional Requirements:
 1. Branding:
    * 1.1 - KN Series shall use Blue (0x2342F5), Yellow (0xF7C664), and/or White (0xFFFFFF) branding colors on all hardware PCB’s, anodized aluminum, and vehicle vinyl wraps.
-   * 1.2 - Clean cable management of all wires 
+   * 1.2 - No wires shall be visible to the customer outside and/or above the locking carpeted truck cover for customers to cut or play with.
+   * 1.3 - All wires visible under the locking carpeted truck cover shall have kevlar covers to INCREASE cutting difficulty.
+   * 1.4 - The External Box (201-0001-A) and Lid (201-0003-A) shall be bent anodized 5052 aluminum sheet metal of color Blue (0x2342F5).
+   * 1.4 - The Internal Box (201-0002-A) shall be bent anodized 5052 aluminum sheet metal of color Yellow (0xF7C664).     
    
 2. Printed Circuit Boards
    * 2.1 - All PCB's installed into the KN Series of vehicles shall be conformal coated. 
    * 2.2 - All PCB's shall use the [Halo PCB Altium Project Template](https://github.com/jose-halocar/ee_altium_template/blob/master/HaloCar_Project_Rename_This_File.PrjPcb)
      * DESIGN NOTE: This template defines specs like four layer stackup, copper weight, and drawing title block are defined here
    * 2.3 - Schematics:
-     * 2.3.1 - Custom Halo data loggers shall use the [STM32G4](https://www.st.com/en/microcontrollers-microprocessors/stm32g4-series.html) family of microcontrollers.
+     * 2.3.1 - All Halo temperature and vibration data loggers shall use the [STM32G4](https://www.st.com/en/microcontrollers-microprocessors/stm32g4-series.html) family of microcontrollers.
+     * 2.3.2 - All CAN Bus Transceivers shall use ???
+     * 2.3.3 - All Analog-To-Digital Convertors (ADC) shall be at least 10 bit and have max frequency of TODO
+     * 2.3.4 - All Digital-To-Analog Convertors (DAC) shall be at least 12 bit and have max frequency of TODO
+     * 2.3.5 - All passive components (resistors, capacitors, inductors, crystals, etc) shall have at least an AEC-Q200 automotive [GRADE 1](https://www.golledge.com/news/the-aec-q200-standard-what-does-it-really-mean/#:~:text=The%20AEC%2DQ200%20qualification%20is,tests%20contained%20within%20the%20standard.) rating surviving temperatures of -40 to +125 °C.
+      * DESIGN NOTE: An AEC-Q200 automotive [GRADE 0] range of -50 to +150°C would increase cost too much and over constrain vendor selection. 
    * 2.4 - PCB Layouts:
+     * 2.4.1 - TODO
 
 3. Data Processing Subsystems:
    * 3.1 - There shall be clean and quick (less than 1 minute) access to coin cell battery on selected motherboard.
@@ -56,19 +65,29 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 4.5 - All CAN Bus cables shall be less then 5 meters and ??? 
 
 5. Security:
-   * For legal / IP reasons is shall be clear that customers are not allowed to touch hardware.
-   * The internal OBC box shall have "Do Not Taper" stickers.
+   * 5.1 - For legal / IP reasons is shall be clear that customers are not allowed to touch hardware.
+   * 5.2 - The internal OBC box shall have "Do Not Taper" stickers.
      * DESIGN NOTE: [EXAMPLE STICKER THAT MAY CHANGE](https://www.grainger.com/product/38E801?gucid=N:N:PS:Paid:GGL:CSM-2295:4P7A1P:20501231&gclid=Cj0KCQiAutyfBhCMARIsAMgcRJR3yioMc0_DuhTHmW255EtnDVs2-LeNE-f4x5XzFgfv-0M7RsnVqO4aAo7JEALw_wcB&gclsrc=aw.ds)
-   * The external OBC box shall have "Do Not Taper: Doing so means immediate removal from the Halo rental platform"  text etched into metal  
-   * The OBC lid shall have two 4 digit pin based locking systems.
-   * The OBC lid shall have four locking bolts that require special tools to loosen.
-   * The OBC shall contain NO source code, with as few binary executables as possible (goal is one).
-   * The OBC login and SSH ports shall be protected by only passwords (not SSD encryption or a Data Loss Prevention (DLP) security strategy).    
+   * 5.3 - The External Box (201-0001-A) shall have "Do Not Taper: Doing so means immediate removal from the Halo rental platform" text etched into metal.  
+   * 5.4 - The Lid (201-0003-A) shall have two 4 digit pin based locking systems.
+   * 5.5 - The Lid (201-0003-A) shall have four locking bolts that require special tools to loosen.
+   * 5.6 - The OBC Assembly (200-0001-A) shall contain NO source code, with as few binary executables as possible (goal is one).
+   * 5.7 - The OBC login and SSH ports shall be protected by only passwords (not SSD encryption or a Data Loss Prevention (DLP) security strategy).    
 
-6. Production Part Database cost per KN shall be less than $4K 
+6. Mechanical Structure:
+   * 6.1 - The 3 holes drilled into the rear trunk floor for vibration dampers shall be defined by a stainless steel stencil.
+   * 6.2 - The External Box (201-0001-A) and Lid (201-0003-A) shall be IP62 rated, while the Internal Box (201-0002-A) is not IP rated. 
+     * DESIGN NOTE: IP6X means dust protected, but not dust tight.
+     * DESIGN NOTE: IPX2 means protection against small low pressure indirect water drops, NOT submersion under water or water spray from a bottle or hose.
+   * 6.3 - The taetr 
 
-Spheriecal vibration isolatorin in each direction 
-11K RPM server fans https://www.youtube.com/watch?v=nAFB9w2Rh0Y
+7. Production Cost:
+   * 7.1 - The total "Part Database" cost per OBC shall be less than $6K.
+     * DESIGN NOTES: This doesn't include any cabling or cameras outside the OBC.
+   * 7.2 - All OBC components shall have a lead time of less than 4 weeks.  
+   * 7.3 - Halo Car shall stock at least 8 OBC's to buffer REQUIREMENT 7.2 (4 week lead time).
+     * DESIGN NOTE: This assumes we can build 2 cars per week during initial production run (March 1, 2023 to Nov 1, 2023).
+
 
 ### 2.2 Software V1 Functional Requirements:
 1. Branding:
