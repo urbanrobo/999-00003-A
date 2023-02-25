@@ -52,8 +52,13 @@ All hardware and software requirements must be described in metric units (kg, cm
 3. Data Processing Subsystems:
    * 3.1 - There shall be clean and quick (less than 1 minute) access to coin cell battery on selected motherboard.
      * DESIGN NOTE: For replacement of battery after normal usage and to clear memory to fix [Q-Code](https://www.asus.com/support/FAQ/1043948/) errors.
-   * 3.2 - The vehicle Chassis CAN (C-CAN) and Powertrain CAN (P-CAN) shall interface with the OBC via a PCI Express slot.
+   * 3.2 - The vehicle Chassis CAN (C-CAN) and Powertrain CAN (P-CAN) shall interface with the OBC via a M.2 slot.
    * 3.3 - The On-Board Compute and vehicle ignition start/stop line shall have the ability to be powered on by a Radio Frequency (RF) button click.
+   * 3.4 - 6 cameras and resolution of 1080p  30 fps  and other 720p 
+   * 3.5 - GPS shoudl use the motherboard headers not the USE the slots
+   * 3.5 - Modems should 4G LTE and have min bandwidth of 800 kbps Cerbus hit
+   * 3.6 - Have a RF or Bluebooth dongle for mouse and keyboard shoudl ne populated in Motherboard and never come out. (SMall combined system)
+   * 3.7 - HDMI montior debug through the GPU should be possible without removing any componment 
 
 4. Cables Harnesses:
    * 4.1 - All USB 2.0 cables for cameras shall be less then ?2.5 meters?, contain ground shielding, and have impedance controlled twisted pairs. 
@@ -63,30 +68,40 @@ All hardware and software requirements must be described in metric units (kg, cm
      * 4.4.1 - All analog inputs into microcontrollers shall have local hardware based low pass filters.
        * Design Note: Cut off frequency determined based on real life Electromagnetic Interference (EMI) samples from a 6 GHz oscilloscope. 
    * 4.5 - All CAN Bus cables shall be less then 5 meters and ??? 
+   * 4.6 Better labels on both ends of the cable 
+   * 4.7 Vibratting and fretting 
+   * 4.8 - Clean black caulking above the window for branding 
+   * 4.9 Gromments to prevent body scrathes from car
+   * 4.10 - No excessive length cable. 
+   * 4.11 - Must be Commerical Off The Shelf (COTS) connectors
 
 5. Security:
    * 5.1 - For legal / IP reasons is shall be clear that customers are not allowed to touch hardware.
    * 5.2 - The internal OBC box shall have "Do Not Taper" stickers.
      * DESIGN NOTE: [EXAMPLE STICKER THAT MAY CHANGE](https://www.grainger.com/product/38E801?gucid=N:N:PS:Paid:GGL:CSM-2295:4P7A1P:20501231&gclid=Cj0KCQiAutyfBhCMARIsAMgcRJR3yioMc0_DuhTHmW255EtnDVs2-LeNE-f4x5XzFgfv-0M7RsnVqO4aAo7JEALw_wcB&gclsrc=aw.ds)
    * 5.3 - The External Box (201-0001-A) shall have "Do Not Taper: Doing so means immediate removal from the Halo rental platform" text etched into metal.  
-   * 5.4 - The Lid (201-0003-A) shall have two 4 digit pin based locking systems.
-   * 5.5 - The Lid (201-0003-A) shall have four locking bolts that require special tools to loosen.
+   * 5.4 - The Lid (201-0003-A) shall have two 4 digit pin EMBEDDED (Or dangling with rubber case and do not tamper tape with blank space to date time tape was applied) based locking systems.
+   * 5.5 - REMOVED
    * 5.6 - The OBC Assembly (200-0001-A) shall contain NO source code, with as few binary executables as possible (goal is one).
    * 5.7 - The OBC login and SSH ports shall be protected by only passwords (not SSD encryption or a Data Loss Prevention (DLP) security strategy).    
 
 6. Mechanical Structure:
-   * 6.1 - The 3 holes drilled into the rear trunk floor for vibration dampers shall be defined by a stainless steel stencil.
+   * 6.1 - The 4 holes drilled into the rear trunk floor for vibration dampers shall be defined by a stainless steel stencil.
    * 6.2 - The External Box (201-0001-A) and Lid (201-0003-A) shall be IP62 rated, while the Internal Box (201-0002-A) is not IP rated. 
      * DESIGN NOTE: IP6X means dust protected, but not dust tight.
      * DESIGN NOTE: IPX2 means protection against small low pressure indirect water drops, NOT submersion under water or water spray from a bottle or hose.
    * 6.3 - The taetr 
+   YASH TO HELP
 
 7. Production Cost:
-   * 7.1 - The total "Part Database" cost per OBC shall be less than $6K.
+   * 7.1 - The total "Part Database" cost per OBC shall be less than $ ??? grab data for Partsa Database
      * DESIGN NOTES: This doesn't include any cabling or cameras outside the OBC.
    * 7.2 - All OBC components shall have a lead time of less than 4 weeks.  
    * 7.3 - Halo Car shall stock at least 8 OBC's to buffer REQUIREMENT 7.2 (4 week lead time).
      * DESIGN NOTE: This assumes we can build 2 cars per week during initial production run (March 1, 2023 to Nov 1, 2023).
+
+
+Mat machine shop local
 
 
 ### 2.2 Software V1 Functional Requirements:
