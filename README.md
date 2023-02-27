@@ -8,6 +8,8 @@ AUTHOR(S): BLAZE SANDERS
 
 APPROVED BY: ANAND NANDAKUMAR ON 2023-03-??-1300
 
+![Blue   Yellow Front Iso](https://user-images.githubusercontent.com/122402741/221685766-d485a45d-4cdf-462f-84f6-56b97ed8d488.png)
+
 
 ## 1.0 Mission Concept Review (MCR)
 See [Bill Of Material]() and [Halo Pitch Deck](?TODO?) and [999-00001-A Kira Niro System Architecture Requirements Document](https://docs.google.com/document/d/1RNme7q0ufrCDHNyr7VOxuHKhVUad4LDPr4K3CM-rN78/edit) 
