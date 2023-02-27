@@ -13,15 +13,15 @@ APPROVED BY: ANAND NANDAKUMAR ON 2023-03-??-1300
 See [Bill Of Material]() and [Halo Pitch Deck](?TODO?) and [999-00001-A Kira Niro System Architecture Requirements Document](https://docs.google.com/document/d/1RNme7q0ufrCDHNyr7VOxuHKhVUad4LDPr4K3CM-rN78/edit) 
 
 <br> Objectives:
-1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 5G cellular.
-2. Create a multi-piece computer case with [IP52](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, good airflow, and great stress relief on all cables.
-3. Installation of standby OBCs should be extremely easy/fast and have low risk of breaking cable harnesses. 
-4. Create rental fleet of 10 stacked vehicles by April 15 that could be resold to dealerships for less than $2k in repairs.                                                
+1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 4G LTE cellular connection.
+2. Create a multi-piece computer case with [IP62](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, good airflow, and great stress relief on all cables.
+3. Enable installation of standby OBCs should be extremely easy / fast (less than 15 minutes) and have low risk of breaking cable harnesses. 
+4. Create rental fleet of 9 stacked KN vehicles and ??? CB vehicles by April 15 that could be resold to dealerships for less than $2k in repairs.                                                
 
 <br> Concepts to meet Objectives:
 1. Analog man in the middle attack and digital CAN-FD Bus read and write access.
-2. A three piece metal case: External Box (201-0001-A) that provides cable stress relief, holds fans & heat sinks, and protects against dust & small water drops; Internal Box (201-0002-A) that holds components; and Lid (201-0003-A) that protects against customers and falling objects.
-3. The insertion on an Internal box (201-0002-A) into an External box (201-0001-A) that never leaves a vehicle should take less than 15 minutes and reduce cable bend cycles.
+2. A three piece metal case (200-0001-A): Consisting of an External Box (201-0001-A) that provides cable stress relief and mounting points for fans & heat sinks while protecting against dust & small water drops; an Internal Box (201-0002-A) that holds components; and a Lid (201-0003-A) that protects against customer tamper and falling objects.
+3. The insertion on an Internal Box (201-0002-A) into an External box (201-0001-A) which never leaves a vehicle thus limiting cable bend and insertion cycles to less than 3.
 4. All hardware alternations must limit the number of holes put into a vehicle and not damage paint in ANY way long term. <br> <br>
 
 ## 2.0 Mission Definition Review (MDR)
@@ -33,7 +33,7 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 1.2 - No wires shall be visible to the customer outside and/or above the locking carpeted truck cover for customers to cut or play with.
    * 1.3 - All wires visible under the locking carpeted truck cover shall have kevlar covers to INCREASE cutting difficulty.
    * 1.4 - The External Box (201-0001-A) and Lid (201-0003-A) shall be bent anodized 5052 aluminum sheet metal of color Blue (0x2342F5).
-   * 1.4 - The Internal Box (201-0002-A) shall be bent anodized 5052 aluminum sheet metal of color Yellow (0xF7C664).     
+   * 1.4 - The Internal Box (201-0002-A) shall be bent and NOT anodized 5052 aluminum sheet metal.   
    
 2. Printed Circuit Boards
    * 2.1 - All PCB's installed into the KN Series of vehicles shall be conformal coated. 
@@ -41,24 +41,23 @@ All hardware and software requirements must be described in metric units (kg, cm
      * DESIGN NOTE: This template defines specs like four layer stackup, copper weight, and drawing title block are defined here
    * 2.3 - Schematics:
      * 2.3.1 - All Halo temperature and vibration data loggers shall use the [STM32G4](https://www.st.com/en/microcontrollers-microprocessors/stm32g4-series.html) family of microcontrollers.
-     * 2.3.2 - All CAN Bus Transceivers shall use ???
-     * 2.3.3 - All Analog-To-Digital Convertors (ADC) shall be at least 10 bit and have max frequency of TODO
-     * 2.3.4 - All Digital-To-Analog Convertors (DAC) shall be at least 12 bit and have max frequency of TODO
-     * 2.3.5 - All passive components (resistors, capacitors, inductors, crystals, etc) shall have at least an AEC-Q200 automotive [GRADE 1](https://www.golledge.com/news/the-aec-q200-standard-what-does-it-really-mean/#:~:text=The%20AEC%2DQ200%20qualification%20is,tests%20contained%20within%20the%20standard.) rating surviving temperatures of -40 to +125 °C.
+     * 2.3.2 - All passive components (resistors, capacitors, inductors, crystals, etc) shall have at least an AEC-Q200 automotive [GRADE 1](https://www.golledge.com/news/the-aec-q200-standard-what-does-it-really-mean/#:~:text=The%20AEC%2DQ200%20qualification%20is,tests%20contained%20within%20the%20standard.) rating to survive temperatures of -40 to +125 °C.
       * DESIGN NOTE: An AEC-Q200 automotive [GRADE 0] range of -50 to +150°C would increase cost too much and over constrain vendor selection. 
    * 2.4 - PCB Layouts:
      * 2.4.1 - TODO
 
 3. Data Processing Subsystems:
-   * 3.1 - There shall be clean and quick (less than 1 minute) access to coin cell battery on selected motherboard.
+   * 3.1 - There shall be clean and quick (less than 1 minute) access to coin cell battery on the Crosshair VII motherboard (P/N TODO)
      * DESIGN NOTE: For replacement of battery after normal usage and to clear memory to fix [Q-Code](https://www.asus.com/support/FAQ/1043948/) errors.
    * 3.2 - The vehicle Chassis CAN (C-CAN) and Powertrain CAN (P-CAN) shall interface with the OBC via a M.2 slot.
-   * 3.3 - The On-Board Compute and vehicle ignition start/stop line shall have the ability to be powered on by a Radio Frequency (RF) button click.
-   * 3.4 - 6 cameras and resolution of 1080p  30 fps  and other 720p 
-   * 3.5 - GPS shoudl use the motherboard headers not the USE the slots
-   * 3.5 - Modems should 4G LTE and have min bandwidth of 800 kbps Cerbus hit
-   * 3.6 - Have a RF or Bluebooth dongle for mouse and keyboard shoudl ne populated in Motherboard and never come out. (SMall combined system)
-   * 3.7 - HDMI montior debug through the GPU should be possible without removing any componment 
+   * 3.3 - Both the OBC power on/off and vehicle start/stop state shall be controllable by a Radio Frequency (RF) button click.
+   * 3.4 - The OBC shall support 6 cameras at a resolution of 1080p 30 fps for FRONT Middle, REAR Left & REAR Right and 720p 30 fps for REAR, FRONT Left, and FRONT Right.
+   * 3.5 - The GPS module shall use the motherboard USB 2.0 headers (not the USB 3.0 ports on the IO Shield).
+   * 3.5 - All modems shall support 4G LTE (or lower) and have minimum bandwidth of 800 kbits/sec (under that Cerberus hits occur).
+   * 3.6 - A RF USB 3.0 Type C dongle for mouse and keyboard control shall be permanently populated into the IO Shield and never removed.
+     * DESIGN NOTE: This keeps the all the USB A 3.0 ports open for cameras which need to be connected to specific USB Host Controllers (See https://a.co/d/8kfb1GD)
+   * 3.7 - There shall be the ability to connect a debugging HDMI monitor (connected through the GPU) to the OBC without removing any components.
+     * DESIGN SPEC: This HDMI monitor shall NOT be permanently install in the vehicle and does NOT need a Display Port input.
 
 4. Cables Harnesses:
    * 4.1 - All USB 2.0 cables for cameras shall be less then ?2.5 meters?, contain ground shielding, and have impedance controlled twisted pairs. 
@@ -119,4 +118,8 @@ Mat machine shop local
 ### 5.0 Project Management
 See https://linear.app/halocar/team/HW/active
 
-### 6.0 Free Form Scrath Pad for Hardware & Software V2 Requirements
+### 6.0 Free Form Scratch Pad for Hardware & Software V2 Requirements
+
+
+### 7.0 GitHub Formatting  
+See https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists
