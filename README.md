@@ -16,9 +16,9 @@ See [Bill Of Material]() and [Halo Pitch Deck](?TODO?) and [999-00001-A Kira Nir
 
 <br> Objectives:
 1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 4G LTE cellular connection.
-2. Create a multi-piece computer case with [IP62](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, good airflow, and great stress relief on all cables.
+2. Create a multi-piece computer case with [IP62](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, physical & software security, [good](https://www.tomshardware.com/how-to/set-up-pc-case-fans-for-airflow-and-performance) airflow, and great stress relief on all cables.
 3. Enable installation of standby OBCs should be extremely easy / fast (less than 15 minutes) and have low risk of breaking cable harnesses. 
-4. Create rental fleet of 9 stacked KN vehicles and ??? CB vehicles by April 15 that could be resold to dealerships for less than $2k in repairs.                                                
+4. Create rental fleet of 9 stacked Kia Niro vehicles by April 15 and ??? Chevy Bolt vehicles by ??? that could be resold to dealerships for less than $2k in repairs.                                                
 
 <br> Concepts to meet Objectives:
 1. Analog man in the middle attack and digital CAN-FD Bus read and write access.
@@ -60,6 +60,8 @@ All hardware and software requirements must be described in metric units (kg, cm
      * DESIGN NOTE: This keeps the all the USB A 3.0 ports open for cameras which need to be connected to specific USB Host Controllers (See https://a.co/d/8kfb1GD)
    * 3.7 - There shall be the ability to connect a debugging HDMI monitor (connected through the GPU) to the OBC without removing any components.
      * DESIGN SPEC: This HDMI monitor shall NOT be permanently install in the vehicle and does NOT need a Display Port input.
+   * 3.8 - Airflow just inside inlet fans shall be at least 50 cubic feet per minute (CFM).
+   * 3.9 - The OBC shall have at least a 4 channel temperature and 3 channel vibration data acquisition (DAQ) system.
 
 4. Cables Harnesses:
    * 4.1 - All USB 2.0 cables for cameras shall be less then ?2.5 meters?, contain ground shielding, and have impedance controlled twisted pairs. 
@@ -67,22 +69,23 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 4.3 - All cellular antenna cables shall be less then ?1.5 meters? and coaxial cables with SMA connectors.
    * 4.4 - All wires carrying analog voltage for control surfaces (e.g. brake & gas pedal) shall be less than 1 meter and multi-stranded.
      * 4.4.1 - All analog inputs into microcontrollers shall have local hardware based low pass filters.
-       * Design Note: Cut off frequency determined based on real life Electromagnetic Interference (EMI) samples from a 6 GHz oscilloscope. 
+       * DESIGN NOTE: Cut off frequency determined based on real life Electromagnetic Interference (EMI) samples from a 6 GHz oscilloscope. 
    * 4.5 - All CAN Bus cables shall be less then 5 meters and ??? 
-   * 4.6 Better labels on both ends of the cable 
-   * 4.7 Vibratting and fretting 
-   * 4.8 - Clean black caulking above the window for branding 
-   * 4.9 Gromments to prevent body scrathes from car
-   * 4.10 - No excessive length cable. 
-   * 4.11 - Must be Commerical Off The Shelf (COTS) connectors
+   * 4.6 - All cables shall be labeled longitudinally on both ends with with the [Panduit® LabelCore]() system.
+     * DESIGN NOTE: https://www.fiber-optic-transceiver-module.com/knowledge-of-labeling-cables.html
+   * 4.7 - All cables shall pass through glands seals (aka cord grips) on the External Box (201-00001-A) to provide strain relief / limit cable harnesses vibration and thus reduce connector fretting. 
+   * 4.8 - All black caulking above the front windshield window shall be smooth enough to promote solid company branding. 
+   * 4.9 - All harnesses shall pass through metal surface using rubber grommets to prevent scratches to the wiring.
+   * 4.10 - All No excessive length cable. 
+   * 4.11 - All connectors must be Commercial Off The Shelf (COTS) and not 
 
 5. Security:
    * 5.1 - For legal / IP reasons is shall be clear that customers are not allowed to touch hardware.
-   * 5.2 - The internal OBC box shall have "Do Not Taper" stickers.
+   * 5.2 - The internal OBC box shall have "Do Not Tamper" stickers.
      * DESIGN NOTE: [EXAMPLE STICKER THAT MAY CHANGE](https://www.grainger.com/product/38E801?gucid=N:N:PS:Paid:GGL:CSM-2295:4P7A1P:20501231&gclid=Cj0KCQiAutyfBhCMARIsAMgcRJR3yioMc0_DuhTHmW255EtnDVs2-LeNE-f4x5XzFgfv-0M7RsnVqO4aAo7JEALw_wcB&gclsrc=aw.ds)
-   * 5.3 - The External Box (201-0001-A) shall have "Do Not Taper: Doing so means immediate removal from the Halo rental platform" text etched into metal.  
-   * 5.4 - The Lid (201-0003-A) shall have two 4 digit pin EMBEDDED (Or dangling with rubber case and do not tamper tape with blank space to date time tape was applied) based locking systems.
-   * 5.5 - REMOVED
+   * 5.3 - The External Box (201-0001-A) shall have "Do Not Tamper: Doing so means immediate removal from the Halo rental platform" text etched into metal.  
+   * 5.4 - The Lid (201-0003-A) shall have two 3 digit embedded locking systems.
+   * 5.5 - The locking system shall use do not tamper tape with blank space for the date and time the tape was applied.
    * 5.6 - The OBC Assembly (200-0001-A) shall contain NO source code, with as few binary executables as possible (goal is one).
    * 5.7 - The OBC login and SSH ports shall be protected by only passwords (not SSD encryption or a Data Loss Prevention (DLP) security strategy).    
 
@@ -95,10 +98,10 @@ All hardware and software requirements must be described in metric units (kg, cm
    YASH TO HELP
 
 7. Production Cost:
-   * 7.1 - The total "Part Database" cost per OBC shall be less than $ ??? grab data for Partsa Database
+   * 7.1 - The total "Part Dashboard" cost per OBC shall be less than $ ??? (TODO pull data for Parts Dashboard)
      * DESIGN NOTES: This doesn't include any cabling or cameras outside the OBC.
    * 7.2 - All OBC components shall have a lead time of less than 4 weeks.  
-   * 7.3 - Halo Car shall stock at least 8 OBC's to buffer REQUIREMENT 7.2 (4 week lead time).
+   * 7.3 - Halo Car shall stock at least 8 OBC's to buffer REQUIREMENT 7.2 above.
      * DESIGN NOTE: This assumes we can build 2 cars per week during initial production run (March 1, 2023 to Nov 1, 2023).
 
 
