@@ -61,7 +61,7 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 3.7 - There shall be the ability to connect a debugging HDMI monitor (connected through the GPU) to the OBC without removing any components.
      * DESIGN SPEC: This HDMI monitor shall NOT be permanently install in the vehicle and does NOT need a Display Port input.
    * 3.8 - Airflow just inside inlet fans shall be at least 50 cubic feet per minute (CFM).
-   * 3.9 - The OBC shall have at least a 4 channel temperature and 3 channel vibration data acquisition (DAQ) system.
+   * 3.9 - The OBC shall have at least a 1 channel power (voltage & current) draw, 4 channel temperature and 3 channel vibration data acquisition (DAQ) system.
 
 4. Cables Harnesses:
    * 4.1 - All USB 2.0 cables for cameras shall be less then ?2.5 meters?, contain ground shielding, and have impedance controlled twisted pairs. 
@@ -94,8 +94,7 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 6.2 - The External Box (201-0001-A) and Lid (201-0003-A) shall be IP62 rated, while the Internal Box (201-0002-A) is not IP rated. 
      * DESIGN NOTE: IP6X means dust protected, but not dust tight.
      * DESIGN NOTE: IPX2 means protection against small low pressure indirect water drops, NOT submersion under water or water spray from a bottle or hose.
-   * 6.3 - The taetr 
-   YASH TO HELP
+   * 6.3 - TODO YASH TO HELP
 
 7. Production Cost:
    * 7.1 - The total "Part Dashboard" cost per OBC shall be less than $ ??? (TODO pull data for Parts Dashboard)
@@ -103,9 +102,6 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 7.2 - All OBC components shall have a lead time of less than 4 weeks.  
    * 7.3 - Halo Car shall stock at least 8 OBC's to buffer REQUIREMENT 7.2 above.
      * DESIGN NOTE: This assumes we can build 2 cars per week during initial production run (March 1, 2023 to Nov 1, 2023).
-
-
-Mat machine shop local
 
 
 ### 2.2 Software V1 Functional Requirements:
@@ -124,6 +120,8 @@ Mat machine shop local
 See https://linear.app/halocar/team/HW/active
 
 ### 6.0 Free Form Scratch Pad for Hardware & Software V2 Requirements
+
+Mat from MoTech will ley us use his local machine shop local
 
 
 ### 7.0 GitHub Formatting  
