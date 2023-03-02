@@ -22,8 +22,8 @@ See [Bill Of Material]() and [Halo Pitch Deck](?TODO?) and [999-00001-A Kira Nir
 
 <br> Concepts to meet Objectives:
 1. Analog man in the middle attack and digital CAN-FD Bus read and write access.
-2. A three piece metal case (200-0001-A): Consisting of an External Box (201-0001-A) that provides cable stress relief and mounting points for fans & heat sinks while protecting against dust & small water drops; an Internal Box (201-0002-A) that holds components; and a Lid (201-0003-A) that protects against customer tamper and falling objects.
-3. The insertion on an Internal Box (201-0002-A) into an External box (201-0001-A) which never leaves a vehicle thus limiting cable bend and insertion cycles to less than 3.
+2. A three piece metal case (200-00001-A): Consisting of an External Box (201-00001-A) that provides cable stress relief and mounting points for fans & heat sinks while protecting against dust & small water drops; an Internal Box (201-00002-A) that holds components; and a Lid (201-00003-A) that protects against customer tamper and falling objects.
+3. The insertion on an Internal Box (201-00002-A) into an External box (201-00001-A) which never leaves a vehicle thus limiting cable bend and insertion cycles to less than 3.
 4. All hardware alternations must limit the number of holes put into a vehicle and not damage paint in ANY way long term. <br> <br>
 
 ## 2.0 Mission Definition Review (MDR)
@@ -34,8 +34,8 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 1.1 - KN Series shall use Blue (0x2342F5), Yellow (0xF7C664), and/or White (0xFFFFFF) branding colors on all hardware PCB’s, anodized aluminum, and vehicle vinyl wraps.
    * 1.2 - No wires shall be visible to the customer outside and/or above the locking carpeted truck cover for customers to cut or play with.
    * 1.3 - All wires visible under the locking carpeted truck cover shall have kevlar covers to INCREASE cutting difficulty.
-   * 1.4 - The External Box (201-0001-A) and Lid (201-0003-A) shall be bent anodized 5052 aluminum sheet metal of color Blue (0x2342F5).
-   * 1.4 - The Internal Box (201-0002-A) shall be bent and NOT anodized 5052 aluminum sheet metal.   
+   * 1.4 - The External Box (201-00001-A, 201-00004, & 201-00005-A) and Lid (201-00003-A) shall be bent anodized 5052 aluminum sheet metal of color Blue (0x2342F5).
+   * 1.4 - The Internal Box (201-00002-A) shall be bent and NOT anodized 5052 aluminum sheet metal.   
    
 2. Printed Circuit Boards
    * 2.1 - All PCB's installed into the KN Series of vehicles shall be conformal coated. 
@@ -62,7 +62,7 @@ All hardware and software requirements must be described in metric units (kg, cm
      * DESIGN SPEC: This HDMI monitor shall NOT be permanently install in the vehicle and does NOT need a Display Port input.
    * 3.8 - Airflow just inside inlet fans shall be at least 50 cubic feet per minute (CFM).
    * 3.9 - The OBC shall have at least a 1 channel power (voltage & current) draw, 4 channel temperature and 3 channel vibration data acquisition (DAQ) system.
-   * 3.10 - AWG 5 grounding cable between internal box and trunk floor
+   * 3.10 - Two AWG 3 (diameter 0.22 inches) grounding cables shall connect the Internal Box (201-00002-A) to the trunk floor.
 
 4. Cables Harnesses:
    * 4.1 - All USB 2.0 cables for cameras shall be less then ?2.5 meters?, contain ground shielding, and have impedance controlled twisted pairs. 
@@ -83,18 +83,18 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 5.1 - For legal / IP reasons is shall be clear that customers are not allowed to touch hardware.
    * 5.2 - The internal OBC box shall have "Do Not Tamper" stickers.
      * DESIGN NOTE: [EXAMPLE STICKER THAT MAY CHANGE](https://www.grainger.com/product/38E801?gucid=N:N:PS:Paid:GGL:CSM-2295:4P7A1P:20501231&gclid=Cj0KCQiAutyfBhCMARIsAMgcRJR3yioMc0_DuhTHmW255EtnDVs2-LeNE-f4x5XzFgfv-0M7RsnVqO4aAo7JEALw_wcB&gclsrc=aw.ds)
-   * 5.3 - The External Box (201-0001-A) shall have "Do Not Tamper: Doing so means immediate removal from the Halo rental platform" text etched into metal.  
-   * 5.4 - The Lid (201-0003-A) shall have two 3 digit embedded locking systems.
+   * 5.3 - The External Box (201-00001-A) shall have "Do Not Tamper: Doing so means immediate removal from the Halo rental platform" text etched into metal.  
+   * 5.4 - The Lid (201-00003-A) shall have two 3 digit embedded locking systems.
    * 5.5 - The locking system shall use do not tamper tape with blank space for the date and time the tape was applied.
-   * 5.6 - The OBC Assembly (200-0001-A) shall contain NO source code, with as few binary executables as possible (goal is one).
+   * 5.6 - The OBC Assembly (200-00001-A) shall contain NO source code, with as few binary executables as possible (goal is one).
    * 5.7 - The OBC login and SSH ports shall be protected by only passwords (not SSD encryption or a Data Loss Prevention (DLP) security strategy).    
 
 6. Mechanical Structure:
    * 6.1 - The 4 holes drilled into the rear trunk floor for vibration dampers shall be defined by a stainless steel stencil.
-   * 6.2 - The External Box (201-0001-A) and Lid (201-0003-A) shall be IP62 rated, while the Internal Box (201-0002-A) is not IP rated. 
+   * 6.2 - The External Box (201-00001-A) and Lid (201-00003-A) shall be IP62 rated, while the Internal Box (201-00002-A) is not IP rated. 
      * DESIGN NOTE: IP6X means dust protected, but not dust tight.
      * DESIGN NOTE: IPX2 means protection against small low pressure indirect water drops, NOT submersion under water or water spray from a bottle or hose.
-   * 6.3 - The motherboard to Internal Box (201-0002-A) mechanical interface shall use Sorbothane to remove high frequency vibration.
+   * 6.3 - The motherboard to Internal Box (201-00002-A) mechanical interface shall use Sorbothane to remove high frequency vibration.
    * 6.4 - TODO YASH TO HELP
 
 7. Production Cost:
