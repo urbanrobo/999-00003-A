@@ -18,7 +18,7 @@ See [Bill Of Material]() and [Halo Pitch Deck](?TODO?) and [999-00001-A Kira Nir
 1. Allow any EV with ISO 11898-2 high-speed CAN Bus interface (1 Mbit/s on CAN, 5 Mbit/s on CAN-FD) to be remote piloted via 4G LTE cellular connection.
 2. Create a multi-piece computer case with [IP62](https://reactual.com/portable-electronics/understanding-ip-code.html) rating, physical & software security, [good](https://www.tomshardware.com/how-to/set-up-pc-case-fans-for-airflow-and-performance) airflow, and great stress relief on all cables.
 3. Enable installation of standby OBCs should be extremely easy / fast (less than 15 minutes) and have low risk of breaking cable harnesses. 
-4. Create rental fleet of 9 stacked Kia Niro vehicles by April 15 and ??? Chevy Bolt vehicles by ??? that could be resold to dealerships for less than $2k in repairs.                                                
+4. Create rental fleet of 3 stacked Kia Niro vehicles by March 8.
 
 <br> Concepts to meet Objectives:
 1. Analog man in the middle attack and digital CAN-FD Bus read and write access.
@@ -52,7 +52,7 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 3.1 - There shall be clean and quick (less than 1 minute) access to coin cell battery on the Crosshair VII motherboard (P/N TODO)
      * DESIGN NOTE: For replacement of battery after normal usage and to clear memory to fix [Q-Code](https://www.asus.com/support/FAQ/1043948/) errors.
    * 3.2 - The vehicle Chassis CAN (C-CAN) and Powertrain CAN (P-CAN) shall interface with the OBC via a M.2 slot.
-   * 3.3 - Both the OBC power on/off and vehicle start/stop state shall be controllable by a Radio Frequency (RF) button click.
+   * 3.3 - Both the OBC power on/off shall be controllable by and vehicle start/stop state with standalone pulse PCB.
    * 3.4 - The OBC shall support 6 cameras at a resolution of 1080p 30 fps for FRONT Middle, REAR Left & REAR Right and 720p 30 fps for REAR, FRONT Left, and FRONT Right.
    * 3.5 - The GPS module shall use the motherboard USB 2.0 headers (not the USB 3.0 ports on the IO Shield).
    * 3.5 - All modems shall support 4G LTE (or lower) and have minimum bandwidth of 800 kbits/sec (under that Cerberus hits occur).
@@ -62,6 +62,7 @@ All hardware and software requirements must be described in metric units (kg, cm
      * DESIGN SPEC: This HDMI monitor shall NOT be permanently install in the vehicle and does NOT need a Display Port input.
    * 3.8 - Airflow just inside inlet fans shall be at least 50 cubic feet per minute (CFM).
    * 3.9 - The OBC shall have at least a 1 channel power (voltage & current) draw, 4 channel temperature and 3 channel vibration data acquisition (DAQ) system.
+   * 3.10 - AWG 5 grounding cable between internal box and trunk floor
 
 4. Cables Harnesses:
    * 4.1 - All USB 2.0 cables for cameras shall be less then ?2.5 meters?, contain ground shielding, and have impedance controlled twisted pairs. 
@@ -76,8 +77,7 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 4.7 - All cables shall pass through glands seals (aka cord grips) on the External Box (201-00001-A) to provide strain relief / limit cable harnesses vibration and thus reduce connector fretting. 
    * 4.8 - All black caulking above the front windshield window shall be smooth enough to promote solid company branding. 
    * 4.9 - All harnesses shall pass through metal surface using rubber grommets to prevent scratches to the wiring.
-   * 4.10 - All No excessive length cable. 
-   * 4.11 - All connectors must be Commercial Off The Shelf (COTS) and not 
+   * 4.10 - All harnesses shall have more more then 6 inches of excessive cable length. 
 
 5. Security:
    * 5.1 - For legal / IP reasons is shall be clear that customers are not allowed to touch hardware.
@@ -94,7 +94,8 @@ All hardware and software requirements must be described in metric units (kg, cm
    * 6.2 - The External Box (201-0001-A) and Lid (201-0003-A) shall be IP62 rated, while the Internal Box (201-0002-A) is not IP rated. 
      * DESIGN NOTE: IP6X means dust protected, but not dust tight.
      * DESIGN NOTE: IPX2 means protection against small low pressure indirect water drops, NOT submersion under water or water spray from a bottle or hose.
-   * 6.3 - TODO YASH TO HELP
+   * 6.3 - The motherboard to Internal Box (201-0002-A) mechanical interface shall use Sorbothane to remove high frequency vibration.
+   * 6.4 - TODO YASH TO HELP
 
 7. Production Cost:
    * 7.1 - The total "Part Dashboard" cost per OBC shall be less than $ ??? (TODO pull data for Parts Dashboard)
